@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    
+</head>
+<body background="image3.jpg" style="background-size: cover;"> 
+    <center>
+	<h1 style="color: rgb(16, 17, 17);">CHAT</h1>
+	<div style="width: 100%; color: rgb(7, 3, 3);" id="isichat">
+    </div>
+	<form method="REQUEST" onsubmit="return kirim();" style="color: rgb(108, 21, 221);">
+		<input id="pesan" style="width: 50%" type="text" name="pesan">
+		<button type="submit" onclick="return kirim();">KIRIM PESAN</button>
+	</form>
+</center>	
+</body>
+<script type="text/javascript">
+	function kirim() {
+		let pesan = document.getElementById("pesan").value;
+		document.getElementById("isichat").innerHTML += pesan+"<br/>";
+		document.getElementById("pesan").value = "";
+		return false;
+    }
+</script>
+</html>
